@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", sans-serif;
+    color: #000000;
+  }
+}
+
+/* Document specific styling */
+.notice-header-bar {
+  background-color: #0d3460;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13.5px;
+  line-height: 1.25;
+  padding: 3px 8px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.notice-sub-header {
+  font-weight: 700;
+  font-size: 12px;
+  color: #000000;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.notice-table td, 
+.notice-table th {
+  border: 1px solid #6294c7;
+  padding: 1.5px 5px;
+}
+
+.notice-link-blue {
+  color: #2458b8;
+}
+
+/* Inline edit cues */
+.editable-field {
+  transition: all 0.15s ease-in-out;
+  border-radius: 2px;
+  outline: none;
+}
+
+.is-editing .editable-field:hover {
+  background-color: rgba(36, 88, 184, 0.08);
+  outline: 1px dashed #2458b8;
+}
+
+.is-editing .editable-field:focus {
+  background-color: #ffffff;
+  outline: 2px solid #1a5bb8;
+  box-shadow: 0 0 0 2px rgba(26, 91, 184, 0.2);
+}
+
+/* Print Rules */
+@media print {
+  @page {
+    size: auto;
+    margin: 8mm 10mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .editable-field {
+    outline: none !important;
+    background: transparent !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Ożaropol Official Notice Generator",
+  "description": "Интерактивный редактор и генератор официальных карточек оповещения с настраиваемыми полями, поддержкой фото и экспортом данных для фиксации.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
